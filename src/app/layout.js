@@ -1,3 +1,4 @@
+import StyledComponentsRegistry from "@/lib/StyledComponentsRegistry";
 import { Plus_Jakarta_Sans as PJSans } from "next/font/google";
 
 const pjSans = PJSans({ subsets: ["latin"] });
@@ -10,7 +11,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={pjSans.className}>{children}</body>
+      <body className={pjSans.className}>
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+      </body>
     </html>
   );
 }
