@@ -1,7 +1,6 @@
 import StyledComponentsRegistry from "@/lib/StyledComponentsRegistry";
-import { Plus_Jakarta_Sans as PJSans } from "next/font/google";
-
-const pjSans = PJSans({ subsets: ["latin"] });
+import { Navbar } from "@/components/ui";
+import Global from "@/components/Global";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={pjSans.className}>
+      <body>
+        <Global />
+        <Navbar />
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
