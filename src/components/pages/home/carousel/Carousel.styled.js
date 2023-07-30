@@ -5,5 +5,5 @@ export const StyledCarousel = styled(motion.div)`
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background-color: aliceblue;
+  background-color: chartreuse;
 `;
