@@ -44,4 +44,4 @@ npm run dev
 
 ## Liscensing
 
-Licensed under the [MIT License](https://github.com/vanyadioha/oasis/blob/main/LICENSE.md)
+Licensed under the [MIT License](https://github.com/vanyadioha/oasis/blob/main/LICENSE)
