@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OASIS: Virtual Video Game Store
 
-## Getting Started
+Oasis is an open-source, innovative and user-friendly online store website dedicated to the world of video games. This project is intended to showcase my skills as a frontend developer and my passion for delivering exceptional and immersive user experiences.
 
-First, run the development server:
+## TECHNOLOGIES AND APIS
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- **NextJS**: Frontend Framework
+- **Styled-Components**: Styling
+- **Framer-motion**: Animations and Microinteractions
+- **ContextAPI**: State Management
+- **Axios**: API requests
+- **Firebase**: Backend and Auth
+- **Stripe/Paystack**: Payments
+
+## PROJECT ROADMAP
+
+- Build base project UI, add animations and make it completely responsive.
+- Add Products from the API
+- Add search and filter functions and make them as robust as possible.
+- Implement user authentication.
+- Implement cart functions with firebase and Checkout with Stripe/paystack.
+- Bonus: Implement ratings and reviews.
+- Bonus: Implement game recommendations based on games previously ordered using AI
+
+## RUNNING LOCALLY
+
+1. Clone the repository and install all dependencies using NPM
+
+```
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Copy `.env.example` to `.env.local` and update the variables
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Start development server
 
-## Learn More
+```
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Liscensing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Licensed under the [MIT License](https://github.com/vanyadioha/oasis/blob/main/LICENSE.md)
