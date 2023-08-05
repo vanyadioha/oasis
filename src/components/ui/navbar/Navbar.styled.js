@@ -3,14 +3,14 @@ import { styled } from "styled-components";
 
 export const StyledNavbar = styled(motion.nav)`
   //Variables
-  --bg-color: #191d20;
-  --primary-text: #fff;
+  /* --bg-color: #191d20;
+  --primary-text: #fff; */
   //Styles
   width: 100vw;
   height: 7rem;
   padding: 0 2rem;
-  background-color: var(--bg-color);
-  color: var(--primary-text);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,8 +19,8 @@ export const StyledNavbar = styled(motion.nav)`
   }
   button {
     height: 100%;
-    background-color: var(--bg-color);
-    color: var(--primary-text);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     border: none;
     outline: none;
     &:hover {
@@ -51,7 +51,7 @@ export const StyledNavbar = styled(motion.nav)`
   .burger .burger-lines,
   .burger .burger-lines:after,
   .burger .burger-lines:before {
-    background-color: var(--primary-text);
+    background-color: var(--text-primary);
   }
 
   //Responsive

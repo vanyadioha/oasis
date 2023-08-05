@@ -2,14 +2,15 @@ import { styled } from "styled-components";
 import { motion } from "framer-motion";
 
 export const StyledMenu = styled(motion.div)`
-  position: absolute;
+  //Styles
+  position: fixed;
   height: 100vh;
   width: 80vw;
   max-width: 40rem;
-  background-color: moccasin;
+  background-color: var(--bg-secondary);
   top: 0;
   right: 0;
-  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem 1rem;
@@ -22,6 +23,7 @@ export const StyledMenu = styled(motion.div)`
       background-color: inherit;
       border: none;
       width: 100%;
+      color: var(--text-primary);
     }
   }
   .menu-top {
