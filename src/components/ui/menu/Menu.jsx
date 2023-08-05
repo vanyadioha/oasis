@@ -1,10 +1,13 @@
 import { StyledMenu } from './Menu.styled'
 import { navBarLeftButtons, navBarRightButtons } from '@/config/navbarConfig'
 import Link from 'next/link'
+import { useContext } from 'react'
+import { navMenuState } from '@/state/navMenuState/navMenuContext'
 
 export const Menu = () => {
+    const { isOpen } = useContext(navMenuState)
     return (
-        <StyledMenu>
+        <StyledMenu style={{ display: isOpen ? 'flex' : 'none' }}>
             <section className='menu-top'>
                 {navBarLeftButtons.map((i) => {
                     return (

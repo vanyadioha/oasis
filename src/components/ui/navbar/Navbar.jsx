@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import { StyledNavbar } from './Navbar.styled'
 import Image from 'next/image'
 import oasisLight from '@/assets/logo/oasis-light.png'
 import { navBarLeftButtons, navBarRightButtons } from '@/config/navbarConfig'
 import Link from 'next/link'
+import { navMenuState } from '@/state/navMenuState/navMenuContext'
 import Burger from '@animated-burgers/burger-squeeze'
 import '@animated-burgers/burger-squeeze/dist/styles.css'
 
 export const Navbar = () => {
-    const [burgerOpen, setBurgerOpen] = useState(false)
+    const { isOpen, handleToggle } = useContext(navMenuState)
     return (
         <StyledNavbar>
             <section className='navbar-left'>
@@ -29,8 +30,8 @@ export const Navbar = () => {
                         </Link>
                     )
                 })}
-                <button type="button" className='burger-button' onClick={() => setBurgerOpen(!burgerOpen)}>
-                    <Burger isOpen={burgerOpen} />
+                <button type="button" className='burger-button' onClick={handleToggle}>
+                    <Burger isOpen={isOpen} />
                 </button>
             </section>
         </StyledNavbar>
