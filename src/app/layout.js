@@ -1,4 +1,4 @@
-import { Menu, Navbar } from "@/components/ui";
+import { Menu, Navbar, AppLayout } from "@/components/ui";
 import Global from "@/components/Global";
 import { NavMenuProvider } from "@/state/navMenuState/navMenuContext";
 
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <Menu />
         </NavMenuProvider>
-        {children}
+        <AppLayout>{children}</AppLayout>
       </body>
     </html>
   );
