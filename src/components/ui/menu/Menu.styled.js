@@ -9,7 +9,7 @@ export const StyledMenu = styled(motion.div)`
   background-color: moccasin;
   top: 0;
   right: 0;
-  display: flex;
+  display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem 1rem;

@@ -6,8 +6,9 @@ import { navMenuState } from '@/state/navMenuState/navMenuContext'
 
 export const Menu = () => {
     const { isOpen } = useContext(navMenuState)
+
     return (
-        <StyledMenu style={{ display: isOpen ? 'flex' : 'none' }}>
+        <StyledMenu isOpen={isOpen}>
             <section className='menu-top'>
                 {navBarLeftButtons.map((i) => {
                     return (
