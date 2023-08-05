@@ -22,6 +22,9 @@ export default createGlobalStyle`
         }
         html {
           font-size: 0.625em;
+          --bg-primary: #191d20;
+          --bg-secondary: #232429;
+          --text-primary: #fff;
         }
         body {
           font-size: 1.6rem;
@@ -41,4 +44,6 @@ export default createGlobalStyle`
         button {
           font-size: 1.6rem;
         }
+        //variables
+        
 `;
