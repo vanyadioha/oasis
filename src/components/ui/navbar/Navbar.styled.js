@@ -2,10 +2,6 @@ import { motion } from "framer-motion";
 import { styled } from "styled-components";
 
 export const StyledNavbar = styled(motion.nav)`
-  //Variables
-  /* --bg-color: #191d20;
-  --primary-text: #fff; */
-  //Styles
   width: 100vw;
   height: 7rem;
   padding: 0 2rem;
