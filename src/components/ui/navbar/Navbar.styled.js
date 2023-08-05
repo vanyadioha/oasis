@@ -42,6 +42,8 @@ export const StyledNavbar = styled(motion.nav)`
   }
   .burger-button {
     display: none;
+    z-index: 2;
+    background-color: inherit;
   }
   .burger {
     font-size: 1rem;
