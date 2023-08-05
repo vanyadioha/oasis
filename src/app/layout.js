@@ -1,5 +1,5 @@
 import StyledComponentsRegistry from "@/lib/StyledComponentsRegistry";
-import { Navbar } from "@/components/ui";
+import { Menu, Navbar } from "@/components/ui";
 import Global from "@/components/Global";
 
 export const metadata = {
@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
       <body>
         <Global />
         <Navbar />
+        <Menu />
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
