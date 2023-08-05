@@ -1,4 +1,3 @@
-import StyledComponentsRegistry from "@/lib/StyledComponentsRegistry";
 import { Menu, Navbar } from "@/components/ui";
 import Global from "@/components/Global";
 import { NavMenuProvider } from "@/state/navMenuState/navMenuContext";
@@ -17,7 +16,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           <Menu />
         </NavMenuProvider>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        {children}
       </body>
     </html>
   );
