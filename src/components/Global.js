@@ -23,7 +23,7 @@ export default createGlobalStyle`
         html {
           font-size: 0.625em;
           --bg-primary: #191d20;
-          --bg-secondary: #232429;
+          --bg-secondary: #2c2f3a;
           --text-primary: #fff;
         }
         body {

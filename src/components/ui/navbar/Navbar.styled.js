@@ -5,7 +5,7 @@ export const StyledNavbar = styled(motion.nav)`
   width: 100vw;
   height: 7rem;
   padding: 0 2rem;
-  background-color: var(--bg-primary);
+  background-color: var(--bg-secondary);
   color: var(--text-primary);
   display: flex;
   justify-content: space-between;
@@ -15,7 +15,7 @@ export const StyledNavbar = styled(motion.nav)`
   }
   button {
     height: 100%;
-    background-color: var(--bg-primary);
+    background-color: var(--bg-secondary);
     color: var(--text-primary);
     border: none;
     outline: none;
