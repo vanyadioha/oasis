@@ -6,7 +6,7 @@ export const MenuBar = () => {
     return (
         <StyledMenuBar>
             <div className="search-layout">
-                <input type="text" className="search-bar" />
+                <input type="text" className="search-bar" placeholder="Search Store" />
                 <button type="button" className="search-icon">s</button>
             </div>
             {homeMenuBarOptions.map((i) => {
