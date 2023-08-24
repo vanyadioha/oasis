@@ -25,6 +25,7 @@ export default createGlobalStyle`
           --bg-primary: #191d20;
           --bg-secondary: #2c2f3a;
           --text-primary: #fff;
+          --text-secondary: #aeaeae
         }
         body {
           font-size: 1.6rem;
