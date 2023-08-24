@@ -7,9 +7,16 @@ export const StyledMenuBar = styled(motion.div)`
   align-items: center;
   gap: 5rem;
   color: var(--text-primary);
+  position: relative;
+  z-index: 2;
+  .search-layout {
+    position: relative;
+    width: 30%;
+  }
   .search-bar {
-    padding: 1rem;
-    width: 25rem;
+    height: 3rem;
+    padding-left: 3.3rem;
+    width: 100%;
     border-radius: 99rem;
     border: none;
     outline: none;
@@ -17,21 +24,62 @@ export const StyledMenuBar = styled(motion.div)`
     color: var(--text-primary);
   }
   .search-icon {
+    height: 2.9rem;
+    width: 2.9rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: inherit;
+    color: var(--text-secondary);
+  }
+  .menu-options {
+    display: flex;
+    gap: 5rem;
+  }
+  .menu-drawer {
     display: none;
+    background-color: inherit;
+    color: var(--text-secondary);
+    border: none;
+    outline: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
   //Responsive
   @media only screen and (max-width: 780px) {
+    height: 3rem;
     .search-layout {
-      position: relative;
+      width: 100%;
+      z-index: 2;
     }
     .search-bar {
-      display: none;
+      border-radius: 0;
     }
     .search-icon {
-      display: block;
+    }
+    .menu-options {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      width: 100%;
+      text-align: center;
+      gap: 1rem;
+      padding: 1rem;
+      z-index: 2;
+      top: 4rem;
+      flex-direction: column;
+      background-color: var(--bg-secondary);
+    }
+    .menu-option {
+      padding: 0.8rem;
+    }
+    .menu-drawer {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      height: 3rem;
     }
   }
 `;
