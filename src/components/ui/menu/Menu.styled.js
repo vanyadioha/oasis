@@ -13,6 +13,7 @@ export const StyledMenu = styled(motion.div)`
   flex-direction: column;
   justify-content: space-between;
   padding: 2rem 1rem;
+  z-index: 3;
   .menu-top,
   .menu-bottom {
     display: flex;

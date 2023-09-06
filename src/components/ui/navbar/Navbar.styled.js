@@ -38,7 +38,7 @@ export const StyledNavbar = styled(motion.nav)`
   }
   .burger-button {
     display: none;
-    z-index: 2;
+    z-index: 4;
     background-color: inherit;
   }
   .burger {
