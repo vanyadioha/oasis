@@ -65,7 +65,7 @@ export const StyledMenuBar = styled(motion.div)`
       position: absolute;
       width: 100%;
       text-align: center;
-      gap: 1rem;
+      gap: 0;
       padding: 1rem;
       z-index: 2;
       top: 4rem;
@@ -73,8 +73,12 @@ export const StyledMenuBar = styled(motion.div)`
       background-color: var(--bg-secondary);
     }
     .menu-option {
-      padding: 0.8rem;
+      padding: 1.5rem;
+      &:not(.menu-option:last-child) {
+        border-bottom: 0.1rem solid #2a2a2a;
+      }
     }
+
     .menu-drawer {
       display: flex;
       gap: 1rem;
