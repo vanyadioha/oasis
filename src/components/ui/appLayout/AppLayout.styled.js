@@ -10,4 +10,7 @@ export const StyledAppLayout = styled.main`
     width: 100%;
     max-width: 144rem;
   }
+  @media only screen and (max-width: 780px) {
+    padding: 2rem;
+  }
 `;
