@@ -18,6 +18,9 @@ export const carouselConfig = [
     logo: fifalogo,
     pix: fifapix,
     objectFit: "contain",
+    synopsis:
+      "Take to the pitch and lead your dream team to glory in the latest installment of the world's favorite football simulation.",
+    price: "$69.99",
   },
   {
     name: "God Of War: Ragnarok",
@@ -25,6 +28,9 @@ export const carouselConfig = [
     logo: gowrlogo,
     pix: gowrpix,
     objectFit: "contain",
+    synopsis:
+      "Join Kratos and Atreus on an epic Norse odyssey as they confront gods and monsters in a quest for redemption and survival.",
+    price: "$69.99",
   },
   {
     name: "Grand Theft Auto V",
@@ -32,6 +38,9 @@ export const carouselConfig = [
     logo: gtavlogo,
     pix: gtavpix,
     objectFit: "contain",
+    synopsis:
+      "Enter the sprawling metropolis of Los santos where crime, chaos and opportunity collide in this open-world adventure of heists and mayhem.",
+    price: "$69.99",
   },
   {
     name: "Horizon: Forbidden West",
@@ -39,6 +48,9 @@ export const carouselConfig = [
     logo: hfwlogo,
     pix: hfwpix,
     objectFit: "contain",
+    synopsis:
+      "Embark on a breathtaking journey across a lush and dangerous frontier, uncovering the mysteries of a world overrun by deadly machines.",
+    price: "$69.99",
   },
   {
     name: "Spider-Man: Miles Morales",
@@ -46,6 +58,9 @@ export const carouselConfig = [
     logo: smmlogo,
     pix: smmpix,
     objectFit: "cover",
+    synopsis:
+      "Swing through the vibrant streets of New York City as Miles Morales, your very own friendly neighborhood spiderman and protect the city from threats that may arise.",
+    price: "$69.99",
   },
   {
     name: "The Last of Us Part II",
@@ -53,5 +68,8 @@ export const carouselConfig = [
     logo: tloulogo,
     pix: tloupix,
     objectFit: "contain",
+    synopsis:
+      "Step into the shoes of Ellie, as she journeys through post-apocalyptic Seattle in this emotionally charged tale of love and retribution.",
+    price: "$69.99",
   },
 ];
