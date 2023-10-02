@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { StyledNavbar } from './Navbar.styled'
 import Image from 'next/image'
-import oasisLight from '@/assets/logo/oasis-light.png'
+import oasisLight from '../../../../public/assets/logo/oasis-light.png'
 import { navBarLeftButtons, navBarRightButtons } from '@/config/navbarConfig'
 import Link from 'next/link'
 import { navMenuState } from '@/state/navMenuState/navMenuContext'
