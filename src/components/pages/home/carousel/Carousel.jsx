@@ -1,4 +1,4 @@
-import { StyledCarousel, StyledFrame } from "./Carousel.styled"
+import { StyledCarousel, StyledFrame, StyledFlickity } from "./Carousel.styled"
 import { carouselConfig } from "@/config/carouselConfig"
 import { AiOutlinePlusCircle as AiOPC } from 'react-icons/ai'
 import Image from "next/image"
@@ -44,7 +44,6 @@ const variants = {
             x: 100,
             opacity: 0,
             transition: {
-                // delay: 0.9,
                 duration: 0.8,
             }
         },
@@ -66,7 +65,6 @@ const variants = {
             x: 100,
             opacity: 0,
             transition: {
-                // delay: 0.9,
                 duration: 0.8,
             }
         },
@@ -88,7 +86,6 @@ const variants = {
             x: 100,
             opacity: 0,
             transition: {
-                // delay: 0.9,
                 duration: 0.8,
             }
         },
@@ -158,9 +155,35 @@ export const Carousel = () => {
                     })}
                 </AnimatePresence>
             </section>
-            <section className="flickity">
-                <h1>{currentFrame}</h1>
-            </section>
+            <ul className="flickity">
+                {carouselConfig.map((i, j) => {
+                    return (
+                        <StyledFlickity
+                            key={`dot ${j}`}
+                            wp={`./assets/carousel/wp/${i.bgTag}`}
+                            bgActive={j === currentFrame}
+                            onClick={() => setCurrentFrame(j)}
+                        >
+                            <div className="flickity-logo">
+                                <Image src={i.logo} alt={i.name} />
+                            </div>
+                            <p>{i.name}</p>
+                            <AnimatePresence>
+                                {j === currentFrame &&
+                                    <motion.div className="flickity-range"
+                                        initial={{ width: 0 }}
+                                        animate={{ width: '100%' }}
+                                        transition={{
+                                            duration: 6,
+                                            ease: "linear"
+                                        }}
+                                        exit={{ display: 'none' }}
+                                    />}
+                            </AnimatePresence>
+                        </StyledFlickity>
+                    )
+                })}
+            </ul>
         </StyledCarousel>
     )
 }

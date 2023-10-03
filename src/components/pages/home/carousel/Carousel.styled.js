@@ -6,22 +6,25 @@ export const StyledCarousel = styled(motion.div)`
   width: 100%;
   height: 60rem;
   display: flex;
+  gap: 2rem;
   .carousel,
   .flickity {
     height: 100%;
+    border-radius: 2rem;
   }
   .carousel {
     width: 80%;
-    border-radius: 2rem;
     background-color: var(--bg-secondary);
-    /* overflow: hidden; */
   }
   .frame {
   }
   .flickity {
     width: 20%;
-    background-color: green;
     z-index: 5;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 `;
 
@@ -30,7 +33,8 @@ export const StyledFrame = styled(motion.div)`
   width: 100%;
   background: linear-gradient(#00000088, #00000088), url(${(p) => p.wp});
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   border-radius: 2rem;
   .carousel-img {
@@ -71,5 +75,36 @@ export const StyledFrame = styled(motion.div)`
       background-color: transparent;
       color: var(--text-primary);
     }
+  }
+`;
+
+export const StyledFlickity = styled(motion.li)`
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background-color: ${(p) => p.bgActive && "var(--bg-secondary)"};
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  .flickity-logo {
+    height: 5rem;
+    width: 5rem;
+    background: linear-gradient(#00000088, #00000088), url(${(p) => p.wp});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0.4rem;
+    img {
+      object-fit: contain;
+    }
+  }
+  .flickity-range {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: ${(p) => p.bgActive && "#ffffff11"};
   }
 `;
