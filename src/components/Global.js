@@ -30,6 +30,8 @@ export default createGlobalStyle`
         body {
           font-size: 1.6rem;
           color: var(--text-primary);
+          overflow-x: hidden;
+
         }
         img {
           width: 100%;
