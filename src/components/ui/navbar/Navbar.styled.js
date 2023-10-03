@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { styled } from "styled-components";
 
 export const StyledNavbar = styled(motion.nav)`
-  width: 100vw;
+  width: 100%;
   height: 7rem;
   padding: 0 2rem;
   background-color: var(--bg-secondary);
