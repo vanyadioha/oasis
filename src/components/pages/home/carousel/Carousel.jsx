@@ -145,7 +145,7 @@ export const Carousel = () => {
                                 <button
                                     type="button" className="wishlist-btn"><span><AiOPC /></span> Add to Wishlist</button>
                             </div>
-                            <motion.div className="carousel-img"
+                            <motion.div className={`carousel-img img-${j}`}
                                 variants={pixVariants}
                             >
                                 <Image src={i.pix} alt={i.name} />
@@ -163,6 +163,8 @@ export const Carousel = () => {
                             wp={`./assets/carousel/wp/${i.bgTag}`}
                             bgActive={j === currentFrame}
                             onClick={() => setCurrentFrame(j)}
+                            initial={j === currentFrame && window.innerWidth <= 1320 ? { width: '1.2rem' } : { width: '3rem' }}
+                            animate={j === currentFrame && window.innerWidth <= 1320 ? { width: '3rem' } : { width: '1.2rem' }}
                         >
                             <div className="flickity-logo">
                                 <Image src={i.logo} alt={i.name} />

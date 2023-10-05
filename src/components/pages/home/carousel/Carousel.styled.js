@@ -7,24 +7,50 @@ export const StyledCarousel = styled(motion.div)`
   height: 60rem;
   display: flex;
   gap: 2rem;
+  position: relative;
   .carousel,
   .flickity {
     height: 100%;
-    border-radius: 2rem;
   }
   .carousel {
     width: 80%;
     background-color: var(--bg-secondary);
+    border-radius: 2rem;
   }
   .frame {
   }
   .flickity {
     width: 20%;
-    z-index: 5;
+    z-index: 2;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: var(--bg-primary);
+  }
+  @media only screen and (max-width: 1320px) {
+    .carousel {
+      width: 100%;
+    }
+    .flickity {
+      flex-direction: row;
+      height: 3rem;
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 1rem;
+      border-radius: 10rem;
+      align-items: center;
+      padding: 1.5rem;
+      width: auto;
+      gap: 2rem;
+    }
+  }
+  @media only screen and (max-width: 780px) {
+    .carousel {
+      overflow: hidden;
+    }
   }
 `;
 
@@ -76,6 +102,49 @@ export const StyledFrame = styled(motion.div)`
       color: var(--text-primary);
     }
   }
+  @media only screen and (max-width: 1320px) {
+    .carousel-info {
+      padding: 5rem 5rem 0;
+    }
+    button {
+      &.wishlist-btn {
+        display: none;
+      }
+    }
+  }
+  @media only screen and (max-width: 780px) {
+    button {
+      display: none;
+    }
+    .carousel-img {
+      width: 50%;
+      height: 100%;
+      left: 0;
+      top: 40%;
+      &.img-4 {
+        top: 20%;
+      }
+      img {
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+    .carousel-info {
+      padding: 2rem;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+    }
+    .carousel-logo {
+      height: 30%;
+      width: 100%;
+      padding: 0;
+      margin-bottom: 2rem;
+      img {
+        object-position: center;
+      }
+    }
+  }
 `;
 
 export const StyledFlickity = styled(motion.li)`
@@ -106,5 +175,19 @@ export const StyledFlickity = styled(motion.li)`
     top: 0;
     left: 0;
     background-color: ${(p) => p.bgActive && "#ffffff11"};
+  }
+  @media only screen and (max-width: 1320px) {
+    padding: 0;
+    background-color: var(--bg-secondary);
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 10rem;
+    .flickity-logo,
+    .flickity-range,
+    p {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 780px) {
   }
 `;
