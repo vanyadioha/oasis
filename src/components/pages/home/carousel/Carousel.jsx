@@ -4,6 +4,7 @@ import { AiOutlinePlusCircle as AiOPC } from 'react-icons/ai'
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
+import { useMediaQuery } from "@uidotdev/usehooks"
 
 const variants = {
     frameVariants: {
@@ -108,6 +109,8 @@ export const Carousel = () => {
         return () => clearInterval(interval)
     }, [currentFrame])
 
+    const isMediumDevice = useMediaQuery('only screen and (max-width: 1320px)')
+
     return (
         <StyledCarousel>
             <section className="carousel">
@@ -163,8 +166,8 @@ export const Carousel = () => {
                             wp={`./assets/carousel/wp/${i.bgTag}`}
                             bgActive={j === currentFrame}
                             onClick={() => setCurrentFrame(j)}
-                            initial={j === currentFrame && window.innerWidth <= 1320 ? { width: '1.2rem' } : { width: '3rem' }}
-                            animate={j === currentFrame && window.innerWidth <= 1320 ? { width: '3rem' } : { width: '1.2rem' }}
+                            initial={{ width: `${j === currentFrame && isMediumDevice ? '1.2rem' : isMediumDevice ? '3rem' : 'auto'}` }}
+                            animate={{ width: `${j === currentFrame && isMediumDevice ? '3rem' : isMediumDevice ? '1.2rem' : 'auto'}` }}
                         >
                             <div className="flickity-logo">
                                 <Image src={i.logo} alt={i.name} />
@@ -186,6 +189,6 @@ export const Carousel = () => {
                     )
                 })}
             </ul>
-        </StyledCarousel>
+        </StyledCarousel >
     )
 }
