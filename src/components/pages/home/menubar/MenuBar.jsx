@@ -1,3 +1,5 @@
+"use client"
+
 import { StyledMenuBar } from "./MenuBar.styled"
 import { homeMenuBarOptions } from "@/config/homeMenuBarConfig"
 import { motion, AnimatePresence } from "framer-motion"
