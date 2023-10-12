@@ -3,6 +3,7 @@ import { homeMenuBarOptions } from "@/config/homeMenuBarConfig"
 import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
 import { AiOutlineSearch, AiOutlineCaretRight, AiOutlineClose } from 'react-icons/ai'
+import { useMediaQuery } from "@uidotdev/usehooks"
 
 const menuVariants = {
     initial: {
@@ -28,17 +29,25 @@ export const MenuBar = () => {
     const [isMenuBarOpen, setIsMenuBarOpen] = useState(false)
     const [isSearchOpen, setIsSearchOpen] = useState(false)
     const [option, setOption] = useState('Discover')
+    const isSmallDevice = useMediaQuery('only screen and (max-width: 780px)')
+
     useEffect(() => {
-        if (window.innerWidth > 780) {
+        if (!isSmallDevice) {
             setIsMenuBarOpen(true)
             setIsSearchOpen(true)
+        } else {
+            setIsMenuBarOpen(false)
+            setIsSearchOpen(false)
         }
-    }, [])
+    }, [isSmallDevice])
 
     const handleSearchbarDisplay = () => {
-        if (window.innerWidth < 780) {
+        if (isSmallDevice) {
             setIsSearchOpen(i => !i)
             setIsMenuBarOpen(false)
+        } else {
+            setIsSearchOpen(true)
+            setIsMenuBarOpen(true)
         }
     }
     const handleOptionChange = (value) => {
@@ -51,7 +60,7 @@ export const MenuBar = () => {
                 <label htmlFor="search" className="search-icon"
                     onClick={handleSearchbarDisplay}
                 >
-                    {isSearchOpen && window.innerWidth < 780 ? <AiOutlineClose /> : <AiOutlineSearch />}
+                    {isSearchOpen && isSmallDevice ? <AiOutlineClose /> : <AiOutlineSearch />}
                 </label>
                 {isSearchOpen && <input type="text" className="search-bar" placeholder="Search Store" id="search" />}
             </div>
