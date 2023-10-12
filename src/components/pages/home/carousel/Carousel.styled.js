@@ -151,7 +151,7 @@ export const StyledFlickity = styled(motion.li)`
   display: flex;
   gap: 2rem;
   align-items: center;
-  background-color: ${(p) => p.bgActive && "var(--bg-secondary)"};
+  background-color: ${(p) => p.bgactive && "var(--bg-secondary)"};
   padding: 1.5rem;
   border-radius: 0.5rem;
   position: relative;
@@ -174,7 +174,7 @@ export const StyledFlickity = styled(motion.li)`
     position: absolute;
     top: 0;
     left: 0;
-    background-color: ${(p) => p.bgActive && "#ffffff11"};
+    background-color: ${(p) => p.bgactive && "#ffffff11"};
   }
   @media only screen and (max-width: 1320px) {
     padding: 0;

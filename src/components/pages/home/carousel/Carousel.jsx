@@ -164,7 +164,7 @@ export const Carousel = () => {
                         <StyledFlickity
                             key={`dot ${j}`}
                             wp={`./assets/carousel/wp/${i.bgTag}`}
-                            bgActive={j === currentFrame}
+                            bgactive={j === currentFrame}
                             onClick={() => setCurrentFrame(j)}
                             initial={{ width: `${j === currentFrame && isMediumDevice ? '1.2rem' : isMediumDevice ? '3rem' : 'auto'}` }}
                             animate={{ width: `${j === currentFrame && isMediumDevice ? '3rem' : isMediumDevice ? '1.2rem' : 'auto'}` }}
