@@ -1,5 +1,3 @@
-"use client"
-
 import { StyledCarousel, StyledFrame, StyledFlickity } from "./Carousel.styled"
 import { carouselConfig } from "@/config/carouselConfig"
 import { AiOutlinePlusCircle as AiOPC } from 'react-icons/ai'
