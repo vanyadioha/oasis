@@ -57,7 +57,8 @@ export const StyledCarousel = styled(motion.div)`
 export const StyledFrame = styled(motion.div)`
   height: 100%;
   width: 100%;
-  background: linear-gradient(#00000088, #00000088), url(${(p) => p.wp});
+  background: linear-gradient(to right, #000000ff, #00000000),
+    url(${(p) => p.wp});
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -113,6 +114,11 @@ export const StyledFrame = styled(motion.div)`
     }
   }
   @media only screen and (max-width: 780px) {
+    background: linear-gradient(to bottom, #000000cc, #00000000),
+      url(${(p) => p.wp});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     button {
       display: none;
     }
