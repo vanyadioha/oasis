@@ -57,7 +57,7 @@ export const StyledCarousel = styled(motion.div)`
 export const StyledFrame = styled(motion.div)`
   height: 100%;
   width: 100%;
-  background: linear-gradient(to right, #000000ff, #00000000),
+  background: linear-gradient(to right, #000000cc, #00000000),
     url(${(p) => p.wp});
   background-position: center;
   background-size: cover;
@@ -129,6 +129,9 @@ export const StyledFrame = styled(motion.div)`
       top: 40%;
       &.img-4 {
         top: 20%;
+      }
+      &.img-0 {
+        top: 30%;
       }
       img {
         object-fit: contain;
