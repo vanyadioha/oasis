@@ -13,7 +13,7 @@ import tloupix from "../../public/assets/carousel/pix/tlou.png";
 
 export const carouselConfig = [
   {
-    name: "FIFA 23",
+    name: "FC 24",
     bgTag: "fifa.jpg",
     logo: fifalogo,
     pix: fifapix,
