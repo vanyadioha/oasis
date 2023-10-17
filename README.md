@@ -11,6 +11,7 @@ Oasis is an open-source, innovative and user-friendly online store website dedic
 - **Axios**: API requests
 - **Firebase**: Backend and Auth
 - **Stripe/Paystack**: Payments
+- **Rawg.io**: Video game API
 
 ## PROJECT ROADMAP
 
