@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import { StyledNavbar } from './Navbar.styled'
 import Image from 'next/image'
 import oasisLight from '../../../../public/assets/logo/oasis-light.png'
