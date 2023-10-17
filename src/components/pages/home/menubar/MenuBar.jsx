@@ -3,7 +3,7 @@ import { homeMenuBarOptions } from "@/config/homeMenuBarConfig"
 import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
 import { AiOutlineSearch, AiOutlineCaretRight, AiOutlineClose } from 'react-icons/ai'
-import { useMediaQuery } from "@uidotdev/usehooks"
+import { useMediaQuery } from "@/hooks"
 
 const menuVariants = {
     initial: {

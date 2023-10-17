@@ -4,7 +4,7 @@ import { AiOutlinePlusCircle as AiOPC } from 'react-icons/ai'
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { useMediaQuery } from "@uidotdev/usehooks"
+import { useMediaQuery } from "@/hooks"
 
 const variants = {
     frameVariants: {
