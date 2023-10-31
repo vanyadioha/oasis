@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// Easily add responsive functionality to thereact app
 export const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(false);
 

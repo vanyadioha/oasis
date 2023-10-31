@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+// Easily adding delays to functions to be run
 function useDebounce(value, delay) {
   const [debouncedValue, setDebouncedValue] = useState(value);
 
