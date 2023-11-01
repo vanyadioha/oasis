@@ -8,7 +8,6 @@ export default function Home() {
       <MenuBar />
       <Carousel />
       <PopularGames baseUrl={baseUrl} apiKey={apiKey} />
-      {/* <SkeletonLoader /> */}
     </>
   );
 }
