@@ -6,6 +6,7 @@ export const StyledSkeleton = styled(motion.div)`
   height: ${(p) => p.h};
   background-color: var(--bg-secondary);
   overflow: hidden;
+  border-radius: 2rem;
   div {
     height: 100%;
     width: 100%;
