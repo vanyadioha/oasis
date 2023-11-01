@@ -24,6 +24,7 @@ export const PopularGames = ({ apiKey, baseUrl }) => {
                                     />}
                                 </div>
                                 <h3>{i.name}</h3>
+                                <p>$59.99</p>
                             </li>
                         )
                     })}
