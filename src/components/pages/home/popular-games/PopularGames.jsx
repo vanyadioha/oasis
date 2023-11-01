@@ -1,4 +1,4 @@
-import { Skeleton } from '@/components/ui'
+import { Error, Skeleton } from '@/components/ui'
 import { StyledPopularGames } from './PopularGames.styled'
 import { useAxiosGet } from '@/hooks'
 import Image from 'next/image'
@@ -28,7 +28,7 @@ export const PopularGames = ({ apiKey, baseUrl }) => {
                         )
                     })}
                 </ul>}
-            {error && 'Something is wrong'}
+            {error && <Error />}
         </StyledPopularGames>
     )
 }
