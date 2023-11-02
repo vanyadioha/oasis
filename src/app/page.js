@@ -1,4 +1,9 @@
-import { Carousel, PopularGames, MenuBar } from "../components/pages/home";
+import {
+  Carousel,
+  PopularGames,
+  MenuBar,
+  Deals,
+} from "../components/pages/home";
 
 export default function Home() {
   const baseUrl = process.env.BASE_URL;
@@ -8,6 +13,25 @@ export default function Home() {
       <MenuBar />
       <Carousel />
       <PopularGames baseUrl={baseUrl} apiKey={apiKey} />
+      <Deals />
+      {/* Deals will be Days gone, Ryse: Son of rome and Sleeping dogs */}
+      {/* 
+          featured: New call of duty battle pass
+          featured: Mk1 kombat pack
+          featured: fc23 new campaign
+      */}
+      {/* Hottest games out rn */}
+      {/* 
+        Halloween specials for scary games
+      */}
+      {/* Featured Special game: Spiderman 2 maybe*/}
+      {/* Most played, new releases, upcoming, most rated, trending(if any)*/}
+      {/* 
+          Platform Spotlight: Playstation
+      */}
+      {/* Browse by category */}
+      {/* Browse/explore ALL Games */}
+      {/* News if any */}
     </>
   );
 }
