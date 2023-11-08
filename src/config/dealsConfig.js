@@ -1,7 +1,7 @@
-import ryse from "../../public/assets/deals/ryse.jpg";
+import ryse from "../../public/assets/deals/ryse.JPG";
 import daysgone from "../../public/assets/deals/daysgone.jpg";
-import farcry5 from "../../public/assets/deals/farcry5.jpg";
-import gears5 from "../../public/assets/deals/gears5.jpg";
+import farcry5 from "../../public/assets/deals/farcry5.JPG";
+import gears5 from "../../public/assets/deals/gears5.JPG";
 
 export const gameDeals = [
   {
