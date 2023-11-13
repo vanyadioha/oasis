@@ -3,6 +3,7 @@ import {
   PopularGames,
   MenuBar,
   Deals,
+  Spotlight,
 } from "../components/pages/home";
 
 export default function Home() {
@@ -14,12 +15,7 @@ export default function Home() {
       <Carousel />
       <PopularGames baseUrl={baseUrl} apiKey={apiKey} />
       <Deals />
-      {/* 
-          featured: New call of duty battle pass
-          featured: Mk1 kombat pack
-          featured: fc23 new campaign
-      */}
-      {/* Hottest games out rn */}
+      <Spotlight baseUrl={baseUrl} apiKey={apiKey} />
       {/* 
         Halloween specials for scary games
       */}
