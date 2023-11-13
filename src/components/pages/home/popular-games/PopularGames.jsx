@@ -2,7 +2,6 @@ import { Error, Skeleton } from '@/components/ui'
 import { StyledPopularGames } from './PopularGames.styled'
 import { useAxiosGet } from '@/hooks'
 import Image from 'next/image'
-import { Suspense } from 'react'
 
 export const PopularGames = ({ apiKey, baseUrl }) => {
     const { data, loading, error } = useAxiosGet(`${baseUrl}/games?key=${apiKey}&page=1&page_size=10`)
