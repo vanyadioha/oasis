@@ -7,7 +7,7 @@ import gears5 from "../../public/assets/deals/gears5.JPG";
 import forza4 from "../../public/assets/deals/forza4.JPG";
 import senua from "../../public/assets/deals/hellblade.JPG";
 import sd from "../../public/assets/deals/sleepingdogs.JPG";
-import uncharted from "../../public/assets/deals/uncharted.JPG";
+import uncharted from "../../public/assets/deals/uncharted.jpg";
 // Explore Campaigns
 import heroes from "../../public/assets/deals/heroesfc.JPG";
 import kombat from "../../public/assets/deals/kombatpak.JPG";
