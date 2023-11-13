@@ -14,7 +14,6 @@ export default function Home() {
       <Carousel />
       <PopularGames baseUrl={baseUrl} apiKey={apiKey} />
       <Deals />
-      {/* Deals will be Days gone, Ryse: Son of rome and Sleeping dogs */}
       {/* 
           featured: New call of duty battle pass
           featured: Mk1 kombat pack

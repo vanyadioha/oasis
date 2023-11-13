@@ -1,7 +1,17 @@
+//Game deals
 import ryse from "../../public/assets/deals/ryse.JPG";
 import daysgone from "../../public/assets/deals/daysgone.jpg";
 import farcry5 from "../../public/assets/deals/farcry5.JPG";
 import gears5 from "../../public/assets/deals/gears5.JPG";
+//Explore Deals
+import forza4 from "../../public/assets/deals/forza4.JPG";
+import senua from "../../public/assets/deals/hellblade.JPG";
+import sd from "../../public/assets/deals/sleepingdogs.JPG";
+import uncharted from "../../public/assets/deals/uncharted.JPG";
+// Explore Campaigns
+import heroes from "../../public/assets/deals/heroesfc.JPG";
+import kombat from "../../public/assets/deals/kombatpak.JPG";
+import nicki from "../../public/assets/deals/nickicod.JPG";
 
 export const gameDeals = [
   {
@@ -27,5 +37,44 @@ export const gameDeals = [
     pix: gears5,
     old: 20.99,
     new: 15.59,
+  },
+];
+
+export const exploreDeals = [
+  {
+    name: "Forza Horizon 4",
+    pix: forza4,
+  },
+  {
+    name: "Hellblade: Senua's Sacrifice",
+    pix: senua,
+  },
+  {
+    name: "Sleeping Dogs",
+    pix: sd,
+  },
+  {
+    name: "Uncharted: The Nathan Drake Collection",
+    pix: uncharted,
+  },
+];
+export const exploreCampaigns = [
+  {
+    name: "EA FC24",
+    campaignName: "FUT Heroes: New icons for a new generation",
+    pix: heroes,
+    txt: "From Cult heroes to unsung legends, these players have all left their mark on the beautiful game and now, they are ready to join up with you on EA FC24.",
+  },
+  {
+    name: "Mortal Kombat 1",
+    campaignName: "Kombat Pack 1: Expand your Kombat Roster",
+    pix: kombat,
+    txt: "Bring carnage to the world of Mortal Kombat with the new DLC warriors, Omni-man, Quan-chi and so on. Purchase the Kombat pack 1 (Available now),  to add them to your roster.",
+  },
+  {
+    name: "COD: MW II",
+    campaignName: "Old Enemies, New Alliances: Introducing the Queen",
+    pix: nicki,
+    txt: "Attention! Attention! Barbz do you read me? Add the new Nicki Minaj operator, emotes and various new weapons to your multiplayer and BR loadouts. Bring mayhem, dominate the competition and take all the glory!",
   },
 ];
