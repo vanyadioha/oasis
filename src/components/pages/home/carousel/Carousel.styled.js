@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { styled } from "styled-components";
 
 export const StyledCarousel = styled(motion.div)`
-  margin-top: 2rem;
+  margin-top: 12rem;
   width: 100%;
   height: 60rem;
   display: flex;
@@ -48,6 +48,7 @@ export const StyledCarousel = styled(motion.div)`
     }
   }
   @media only screen and (max-width: 780px) {
+    margin-top: 10rem;
     .carousel {
       overflow: hidden;
     }

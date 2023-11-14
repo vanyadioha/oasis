@@ -8,7 +8,11 @@ export const StyledMenuBar = styled(motion.div)`
   gap: 5rem;
   color: var(--text-primary);
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  position: fixed;
+  top: 7rem;
+  background-color: var(--bg-primary);
+  padding: 2rem 0;
   .search-layout {
     position: relative;
     width: 30%;
@@ -51,7 +55,9 @@ export const StyledMenuBar = styled(motion.div)`
   }
   //Responsive
   @media only screen and (max-width: 780px) {
-    height: 3rem;
+    padding: 1rem;
+    height: 4rem;
+    margin-left: -2rem;
     .search-layout {
       width: 100%;
       z-index: 2;
@@ -71,6 +77,7 @@ export const StyledMenuBar = styled(motion.div)`
       top: 4rem;
       flex-direction: column;
       background-color: var(--bg-secondary);
+      margin-left: -1rem;
     }
     .menu-option {
       padding: 1.5rem;

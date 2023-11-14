@@ -10,6 +10,9 @@ export const StyledNavbar = styled(motion.nav)`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 3;
   a {
     height: 100%;
   }
@@ -38,8 +41,8 @@ export const StyledNavbar = styled(motion.nav)`
   }
   .burger-button {
     display: none;
-    z-index: 4;
-    background-color: inherit;
+    z-index: 11;
+    background-color: var(--bg-secondary);
   }
   .burger {
     font-size: 1rem;
