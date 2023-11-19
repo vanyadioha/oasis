@@ -49,6 +49,8 @@ export const StyledCarousel = styled(motion.div)`
   }
   @media only screen and (max-width: 780px) {
     margin-top: 10rem;
+    height: 45rem;
+
     .carousel {
       overflow: hidden;
     }
