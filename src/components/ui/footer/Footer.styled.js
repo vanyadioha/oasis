@@ -6,4 +6,15 @@ export const StyledFooter = styled(motion.footer)`
   padding: 2rem;
   background-color: var(--bg-secondary);
   color: var(--text-primary);
+  text-align: center;
+  p {
+    a {
+      text-decoration: underline;
+      &:visited,
+      &:active,
+      &:focus {
+        color: var(--text-primary);
+      }
+    }
+  }
 `;
