@@ -1,16 +1,20 @@
 import { StyledMenu } from './Menu.styled'
 import { navBarLeftButtons, navBarRightButtons } from '@/config/navbarConfig'
 import Link from 'next/link'
-import { useContext } from 'react'
+import { useContext, useRef } from 'react'
 import { navMenuState } from '@/state/navMenuState/navMenuContext'
 import { AnimatePresence } from 'framer-motion'
+import { useOnClickOutside } from '@/hooks'
 
 export const Menu = () => {
-    const { isOpen } = useContext(navMenuState)
+    const { isOpen, handleToggle } = useContext(navMenuState)
+    const menuRef = useRef(null)
+    useOnClickOutside(menuRef, handleToggle)
 
     return (
         <AnimatePresence>
             {isOpen && <StyledMenu
+                ref={menuRef}
                 isOpen={isOpen}
                 initial={{
                     x: '100vw',
