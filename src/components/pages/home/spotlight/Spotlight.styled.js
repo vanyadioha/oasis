@@ -4,6 +4,9 @@ export const StyledSpotlight = styled.section`
   margin-top: 5rem;
   .spotlight-h1 {
     margin-bottom: 2rem;
+    span {
+      display: inline-block;
+    }
   }
   .sony-games {
     width: 100%;

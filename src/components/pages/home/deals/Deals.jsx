@@ -4,7 +4,7 @@ import { gameDeals, exploreDeals, exploreCampaigns } from "@/config/dealsConfig"
 import { AiOutlineArrowRight as AOAR } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 import { useMediaQuery } from "@/hooks"
-
+import Link from "next/link"
 const variants = {
     containerVar: {},
     imgContainerVar: {
@@ -50,7 +50,9 @@ export const Deals = () => {
     return (
         <StyledDeals>
             {/* DEALS OF THE WEEK */}
-            <motion.h1 className="deals-h1" variants={headingVar} whileHover='hover'>Deals of the week <motion.span variants={headingSpanVar}><AOAR size={15} /></motion.span></motion.h1>
+            <Link href='/browse'>
+                <motion.h1 className="deals-h1" variants={headingVar} whileHover='hover'>Deals of the week <motion.span variants={headingSpanVar}><AOAR size={15} /></motion.span></motion.h1>
+            </Link>
             <ul className="deals-container">
                 {gameDeals.map((i, j) => {
                     return (
@@ -87,18 +89,21 @@ export const Deals = () => {
                     <div>
                         <h1>EXPLORE</h1>
                         <h2>the best deals</h2>
-                        <motion.button type="button"
-                            initial={{
-                                backgroundColor: '#fff',
-                                color: '#000'
-                            }}
-                            whileHover={{
-                                backgroundColor: '#5f5f5f',
-                                color: '#fff',
-                                transition: {
-                                    duration: 0.2
-                                }
-                            }}>Shop Now</motion.button>
+                        <Link href='/browse'>
+                            <motion.button type="button"
+                                initial={{
+                                    backgroundColor: '#fff',
+                                    color: '#000'
+                                }}
+                                whileHover={{
+                                    backgroundColor: '#5f5f5f',
+                                    color: '#fff',
+                                    transition: {
+                                        duration: 0.2
+                                    }
+                                }}>Shop Now</motion.button>
+                        </Link>
+
                     </div>
                 </div>
                 <div className="explore-games-container">

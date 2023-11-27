@@ -19,6 +19,11 @@ export default createGlobalStyle`
         }
         a {
           text-decoration: none;
+          &:visited,
+          &:active,
+          &:link {
+            color: var(--text-primary);
+          }
         }
         html {
           font-size: 0.625em;

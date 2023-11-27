@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useEffect, useState } from "react"
 import { AiOutlineSearch, AiOutlineCaretRight, AiOutlineClose } from 'react-icons/ai'
 import { useMediaQuery } from "@/hooks"
+import Link from "next/link"
 
 const menuVariants = {
     initial: {
@@ -83,7 +84,12 @@ export const MenuBar = () => {
                     exit='initial'
                 >
                     {homeMenuBarOptions.map((i) => {
-                        return <div key={i.label} className="menu-option" onClick={() => handleOptionChange(i.label)}>{i.label}</div>
+                        return (
+                            <Link key={i.label}
+                                href={i.label === 'Discover' ? '/' : `/${i.label.toLowerCase()}`}>
+                                <div className="menu-option" onClick={() => handleOptionChange(i.label)}>{i.label}</div>
+                            </Link>
+                        )
                     })}
                 </motion.div>}
             </AnimatePresence>

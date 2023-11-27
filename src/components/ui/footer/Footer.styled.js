@@ -10,11 +10,6 @@ export const StyledFooter = styled(motion.footer)`
   p {
     a {
       text-decoration: underline;
-      &:visited,
-      &:active,
-      &:focus {
-        color: var(--text-primary);
-      }
     }
   }
 `;

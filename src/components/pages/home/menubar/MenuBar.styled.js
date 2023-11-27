@@ -43,6 +43,7 @@ export const StyledMenuBar = styled(motion.div)`
     display: flex;
     gap: 5rem;
   }
+
   .menu-drawer {
     display: none;
     background-color: inherit;
