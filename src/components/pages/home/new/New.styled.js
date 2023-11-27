@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const StyledNew = styled.section`
-  margin-top: 2rem;
+  margin-top: 5rem;
   .new-h1 {
     margin-bottom: 2rem;
+    span {
+      display: inline-block;
+    }
   }
   .new-games {
     width: 100%;

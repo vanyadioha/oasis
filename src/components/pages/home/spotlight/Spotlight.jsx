@@ -3,6 +3,7 @@ import { useAxiosGet } from '@/hooks'
 import Image from 'next/image'
 import { Error, Skeleton } from '@/components/ui'
 import { useMediaQuery } from "@/hooks"
+import { motion } from "framer-motion"
 
 
 export const Spotlight = ({ baseUrl, apiKey }) => {
@@ -33,12 +34,24 @@ export const Spotlight = ({ baseUrl, apiKey }) => {
                 </ul>}
             {error && <Error />}
             <div className="spidey2">
-                <button type="button">Out Now</button>
+                <motion.button type="button"
+                    initial={{
+                        backgroundColor: '#fff',
+                        color: '#000'
+                    }}
+                    whileHover={{
+                        backgroundColor: '#5f5f5f',
+                        color: '#fff',
+                        transition: {
+                            duration: 0.2
+                        }
+                    }}
+                >Out Now</motion.button>
             </div>
             {isSmallDevice && (
                 <>
                     <p className="spidey-txt">Be Greater. Together</p>
-                    <h1 className="spidey-h1">Marvel&#39;s Spider-Man 2</h1>
+                    <h3 className="spidey-h1">Marvel&#39;s Spider-Man 2</h3>
                     <p className="spidey-price">$69.99</p>
                 </>
             )}

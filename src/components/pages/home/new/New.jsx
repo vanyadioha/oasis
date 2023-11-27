@@ -2,12 +2,26 @@ import { ImgFallback, StyledNew } from "./New.styled"
 import { useAxiosGet } from '@/hooks'
 import Image from 'next/image'
 import { Error, Skeleton } from '@/components/ui'
+import { AiOutlineArrowRight as AOAR } from 'react-icons/ai'
+import { motion } from "framer-motion"
+
+const variants = {
+    headingVar: {
+        hover: {
+
+        }
+    },
+    headingSpanVar: {
+        hover: { x: 10 }
+    }
+}
+const { headingSpanVar, headingVar } = variants
 
 export const New = ({ baseUrl, apiKey }) => {
     const { data, loading, error } = useAxiosGet(`${baseUrl}/games?key=${apiKey}&page_size=10&ordering=released`)
     return (
         <StyledNew>
-            <h1 className="new-h1">New Releases</h1>
+            <motion.h1 className="new-h1" variants={headingVar} whileHover='hover'>New Releases <motion.span variants={headingSpanVar}><AOAR size={15} /></motion.span></motion.h1>
             {loading && <Skeleton />}
             {data &&
                 <ul className='new-games'>

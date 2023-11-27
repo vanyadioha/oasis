@@ -39,15 +39,33 @@ export default createGlobalStyle`
           object-fit: cover;
           object-position: center;
         }
-        h1,
-        h2,
-        h3,
+        h1 {
+          font-size: 3rem;
+        }
+        h2 {
+          font-size: 2.5rem;
+        }
+        h3 {
+          font-size: 2.1rem;
+        }
         h4,
         h5,
         h6,
-        button {
+        button, p {
           font-size: 1.6rem;
         }
-        //variables
-        
+        @media only screen and (max-width: 780px) {
+          h1 {
+            font-size: 2.5rem;
+          }
+          h2 {
+            font-size: 2rem;
+          }
+          h3 {
+            font-size: 1.8rem;
+          }
+          p {
+            font-size: 1.4rem;
+          }
+        }
 `;

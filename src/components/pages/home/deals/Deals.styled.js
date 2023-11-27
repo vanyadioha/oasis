@@ -2,9 +2,12 @@ import { styled } from "styled-components";
 
 export const StyledDeals = styled.section`
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 5rem;
   .deals-h1 {
     margin-bottom: 2rem;
+    span {
+      display: inline-block;
+    }
   }
   .deals-container {
     width: 100%;
@@ -40,6 +43,7 @@ export const StyledDeals = styled.section`
     display: inline-flex;
     gap: 1rem;
     align-items: center;
+    font-size: 1.8rem;
     span {
       display: inline-block;
       padding: 1rem;
@@ -47,8 +51,9 @@ export const StyledDeals = styled.section`
       border-radius: 0.7rem;
     }
   }
+  /* Explore section */
   .explore-container {
-    margin-top: 2rem;
+    margin-top: 5rem;
     height: 50rem;
     background: linear-gradient(to right, #000000aa, #000000aa),
       url("./assets/deals/wp2.JPG");
@@ -77,11 +82,10 @@ export const StyledDeals = styled.section`
     button {
       padding: 2rem;
       width: 40%;
-      background-color: turquoise;
+      background-color: #fff;
       border: none;
       outline: none;
       font-size: 2rem;
-      border-radius: 1rem;
     }
   }
   .explore-games-container {
@@ -96,8 +100,9 @@ export const StyledDeals = styled.section`
     width: 12rem;
     height: 18rem;
   }
+  /* Campaign section */
   .campaign-section {
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
   .explore-campaigns {
     display: flex;
@@ -106,19 +111,25 @@ export const StyledDeals = styled.section`
   }
   .explore-campaign {
     flex-basis: 30%;
+    padding: 1rem;
+    border-radius: 1rem;
   }
-  .campaign-h1 {
-    font-size: 2rem;
+  .campaign-img {
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
   }
   .campaign-p {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    color: var(--text-secondary);
   }
   @media only screen and (max-width: 780px) {
     .deals-container {
-      height: 30rem;
+      height: 32rem;
       justify-content: unset;
       gap: 2rem;
       overflow: scroll;
+      padding-bottom: 2rem;
     }
     .deal-container {
       min-width: 20rem;
@@ -127,8 +138,11 @@ export const StyledDeals = styled.section`
     .deal-txt {
       padding: 1rem;
     }
+    .deal-prices {
+      font-size: 1.4rem;
+    }
     .explore-container {
-      flex-direction: column-reverse;
+      flex-direction: column;
       height: auto;
       padding: 5rem 0;
       gap: 5rem;
@@ -154,8 +168,9 @@ export const StyledDeals = styled.section`
       flex-direction: column;
       gap: 3rem;
     }
-    .campaign-p {
-      margin-top: 1rem;
-    }
+    /* .explore-campaign {
+      background-color: transparent;
+      padding: 0;
+    } */
   }
 `;

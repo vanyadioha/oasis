@@ -1,13 +1,26 @@
 import { Error, Skeleton } from '@/components/ui'
 import { StyledPopularGames } from './PopularGames.styled'
 import { useAxiosGet } from '@/hooks'
+import { AiOutlineArrowRight as AOAR } from 'react-icons/ai'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 
+const variants = {
+    headingVar: {
+        hover: {
+
+        }
+    },
+    headingSpanVar: {
+        hover: { x: 10 }
+    }
+}
+const { headingSpanVar, headingVar } = variants
 export const PopularGames = ({ apiKey, baseUrl }) => {
     const { data, loading, error } = useAxiosGet(`${baseUrl}/games?key=${apiKey}&page=1&page_size=10`)
     return (
         <StyledPopularGames>
-            <h1>Games that you love <span>{'>'}</span></h1>
+            <motion.h1 variants={headingVar} whileHover='hover'>Games that you love <motion.span variants={headingSpanVar}><AOAR size={15} /></motion.span></motion.h1>
             {loading && <Skeleton />}
             {data &&
                 <ul className='popular-games'>

@@ -2,12 +2,26 @@ import { StyledGenres } from "./Genre.styled"
 import { useAxiosGet } from '@/hooks'
 import Image from 'next/image'
 import { Error, Skeleton } from '@/components/ui'
+import { AiOutlineArrowRight as AOAR } from 'react-icons/ai'
+import { motion } from "framer-motion"
+
+const variants = {
+    headingVar: {
+        hover: {
+
+        }
+    },
+    headingSpanVar: {
+        hover: { x: 10 }
+    }
+}
+const { headingSpanVar, headingVar } = variants
 
 export const Genres = ({ baseUrl, apiKey }) => {
     const { data, loading, error } = useAxiosGet(`${baseUrl}/genres?key=${apiKey}&page_size=30`)
     return (
         <StyledGenres>
-            <h1 className="genre-h1">Explore Games by Genre</h1>
+            <motion.h1 className="genre-h1" variants={headingVar} whileHover='hover'>Explore Games by Genre <motion.span variants={headingSpanVar}><AOAR size={15} /></motion.span></motion.h1>
             {loading && <Skeleton />}
             {data &&
                 <ul className='game-genres'>

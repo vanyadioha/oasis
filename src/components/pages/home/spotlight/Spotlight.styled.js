@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledSpotlight = styled.section`
-  margin-top: 2rem;
+  margin-top: 5rem;
   .spotlight-h1 {
     margin-bottom: 2rem;
   }
@@ -20,7 +20,7 @@ export const StyledSpotlight = styled.section`
     height: 13.5rem;
   }
   .spidey2 {
-    margin-top: 2rem;
+    margin-top: 5rem;
     height: 28rem;
     background: linear-gradient(to right, transparent, transparent),
       url("./assets/spotlight/spidey2.jpg");
@@ -28,6 +28,7 @@ export const StyledSpotlight = styled.section`
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
+    border-radius: 2rem;
     button {
       position: absolute;
       bottom: 50%;
@@ -37,7 +38,6 @@ export const StyledSpotlight = styled.section`
       padding: 2rem;
       border: none;
       outline: none;
-      background-color: #d0d0d0;
     }
   }
 
@@ -67,6 +67,11 @@ export const StyledSpotlight = styled.section`
     }
     .spidey-txt {
       color: var(--text-secondary);
+      margin: 1rem 0;
+    }
+    .spidey-price {
+      margin-top: 1rem;
+      font-size: 2rem;
     }
   }
 `;

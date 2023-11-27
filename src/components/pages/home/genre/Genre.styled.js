@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const StyledGenres = styled.section`
-  margin-top: 2rem;
+  margin-top: 5rem;
   .genre-h1 {
     margin-bottom: 2rem;
+    span {
+      display: inline-block;
+    }
   }
   .game-genres {
     width: 100%;

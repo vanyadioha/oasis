@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { StyledDeals } from "./Deals.styled"
 import { gameDeals, exploreDeals, exploreCampaigns } from "@/config/dealsConfig"
+import { AiOutlineArrowRight as AOAR } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 import { useMediaQuery } from "@/hooks"
 
@@ -31,17 +32,25 @@ const variants = {
             opacity: 1
         },
         0: {}
+    },
+    headingVar: {
+        hover: {
+
+        }
+    },
+    headingSpanVar: {
+        hover: { x: 10 }
     }
 }
 
-const { containerVar, imgContainerVar, textVar } = variants
+const { containerVar, imgContainerVar, textVar, headingSpanVar, headingVar } = variants
 
 export const Deals = () => {
     const isSmallDevice = useMediaQuery('only screen and (max-width: 780px)')
     return (
         <StyledDeals>
             {/* DEALS OF THE WEEK */}
-            <h1 className="deals-h1">Deals of the week</h1>
+            <motion.h1 className="deals-h1" variants={headingVar} whileHover='hover'>Deals of the week <motion.span variants={headingSpanVar}><AOAR size={15} /></motion.span></motion.h1>
             <ul className="deals-container">
                 {gameDeals.map((i, j) => {
                     return (
@@ -78,7 +87,18 @@ export const Deals = () => {
                     <div>
                         <h1>EXPLORE</h1>
                         <h2>the best deals</h2>
-                        <button type="button">Shop Now</button>
+                        <motion.button type="button"
+                            initial={{
+                                backgroundColor: '#fff',
+                                color: '#000'
+                            }}
+                            whileHover={{
+                                backgroundColor: '#5f5f5f',
+                                color: '#fff',
+                                transition: {
+                                    duration: 0.2
+                                }
+                            }}>Shop Now</motion.button>
                     </div>
                 </div>
                 <div className="explore-games-container">
@@ -109,9 +129,9 @@ export const Deals = () => {
                                 <div className="campaign-img">
                                     <Image alt={i.campaignName} src={i.pix} />
                                 </div>
-                                <h1 className="campaign-h1">
+                                <h3>
                                     {`${i.campaignName} (${i.name})`}
-                                </h1>
+                                </h3>
                                 <p className="campaign-p">
                                     {i.txt}
                                 </p>
