@@ -1,9 +1,9 @@
 "use client";
 
 import { createGlobalStyle } from "styled-components";
-import { Plus_Jakarta_Sans as PJSans } from "next/font/google";
+import { Inter } from "next/font/google";
 
-const pjSans = PJSans({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
 export default createGlobalStyle`
         *,
@@ -12,7 +12,6 @@ export default createGlobalStyle`
           padding: 0;
           margin: 0;
           box-sizing: border-box;
-          font-family: ${pjSans.style.fontFamily};
         }
         ul {
           list-style: none;
@@ -26,6 +25,7 @@ export default createGlobalStyle`
           }
         }
         html {
+          font-family: ${inter.style.fontFamily};
           font-size: 0.625em;
           --bg-primary: #191d20;
           --bg-secondary: #2c2f3a;
@@ -58,6 +58,15 @@ export default createGlobalStyle`
         h6,
         button, p {
           font-size: 1.6rem;
+        }
+        .truncate {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          max-width: 100%;
+        }
+        .game-name {
+          margin: 1rem 0;
         }
         @media only screen and (max-width: 780px) {
           h1 {

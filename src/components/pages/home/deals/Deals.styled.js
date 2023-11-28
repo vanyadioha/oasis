@@ -21,6 +21,9 @@ export const StyledDeals = styled.section`
     overflow: hidden;
     position: relative;
     border-radius: 2rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .deal-img-container {
     width: 100%;
@@ -86,6 +89,9 @@ export const StyledDeals = styled.section`
       border: none;
       outline: none;
       font-size: 2rem;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
   .explore-games-container {
@@ -99,6 +105,9 @@ export const StyledDeals = styled.section`
   .explore-game {
     width: 12rem;
     height: 18rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
   /* Campaign section */
   .campaign-section {
@@ -113,6 +122,9 @@ export const StyledDeals = styled.section`
     flex-basis: 30%;
     padding: 1rem;
     border-radius: 1rem;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .campaign-img {
     margin-bottom: 1rem;

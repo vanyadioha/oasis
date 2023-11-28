@@ -42,7 +42,7 @@ export const Spotlight = ({ baseUrl, apiKey }) => {
                                         height={720}
                                     />}
                                 </div>
-                                <h3>{i.name}</h3>
+                                <h3 className="game-name truncate">{i.name}</h3>
                                 <p>$59.99</p>
                             </li>
                         )

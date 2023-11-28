@@ -17,6 +17,11 @@ export const StyledGenres = styled.section`
   }
   .game-genre {
     width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .game-img-container {
     width: 100%;

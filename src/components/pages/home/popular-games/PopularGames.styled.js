@@ -20,11 +20,15 @@ export const StyledPopularGames = styled(motion.section)`
   }
   .popular-game {
     width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .game-img-container {
     width: 100%;
     height: 13.5rem;
-    /* height: calc((9 * width) / 16); */
+    border-radius: 1rem;
+    overflow: hidden;
   }
   @media only screen and (max-width: 780px) {
     .popular-games {

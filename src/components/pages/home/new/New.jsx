@@ -40,7 +40,7 @@ export const New = ({ baseUrl, apiKey }) => {
                                     /> : <ImgFallback
                                         bg={i.dominant_color}>{i.name}</ImgFallback>}
                                 </div>
-                                <h3>{i.name}</h3>
+                                <h3 className="game-name truncate">{i.name}</h3>
                                 <p>$59.99</p>
                             </li>
                         )

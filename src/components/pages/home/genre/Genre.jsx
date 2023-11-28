@@ -8,6 +8,15 @@ import Link from "next/link"
 
 
 const variants = {
+    containerVar: {},
+    imgContainerVar: {
+        initial: {
+            scale: 1.05,
+        },
+        hover: {
+            scale: 1,
+        },
+    },
     headingVar: {
         hover: {
 
@@ -17,7 +26,7 @@ const variants = {
         hover: { x: 10 }
     }
 }
-const { headingSpanVar, headingVar } = variants
+const { headingSpanVar, headingVar, containerVar, imgContainerVar } = variants
 
 export const Genres = ({ baseUrl, apiKey }) => {
     const { data, loading, error } = useAxiosGet(`${baseUrl}/genres?key=${apiKey}&page_size=30`)
@@ -31,8 +40,8 @@ export const Genres = ({ baseUrl, apiKey }) => {
                 <ul className='game-genres'>
                     {data.results.map((i) => {
                         return (
-                            <li className='game-genre' key={i.slug}>
-                                <div className="game-img-container">
+                            <motion.li className='game-genre' key={i.slug} variants={containerVar} initial='initial' whileHover='hover'>
+                                <motion.div className="game-img-container" variants={imgContainerVar}>
                                     {i.image_background && <Image
                                         src={i.image_background}
                                         alt={i.slug}
@@ -43,8 +52,8 @@ export const Genres = ({ baseUrl, apiKey }) => {
                                     >
                                         <h3>{i.name}</h3>
                                     </div>
-                                </div>
-                            </li>
+                                </motion.div>
+                            </motion.li>
                         )
                     })}
                     <li className="browse-all">+ Browse all Games</li>

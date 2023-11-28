@@ -17,6 +17,9 @@ export const StyledNew = styled.section`
   }
   .new-game {
     width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .game-img-container {
     width: 100%;

@@ -17,6 +17,9 @@ export const StyledSpotlight = styled.section`
   }
   .sony-game {
     width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .game-img-container {
     width: 100%;
@@ -41,6 +44,9 @@ export const StyledSpotlight = styled.section`
       padding: 2rem;
       border: none;
       outline: none;
+      &:hover {
+        cursor: pointer;
+      }
     }
   }
 

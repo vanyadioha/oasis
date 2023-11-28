@@ -14,9 +14,6 @@ const variants = {
         hover: {
             scale: 1,
         },
-        small: {
-            scale: 1
-        }
     },
     textVar: {
         initial: {
@@ -28,10 +25,6 @@ const variants = {
                 delay: 0.1
             }
         },
-        small: {
-            opacity: 1
-        },
-        0: {}
     },
     headingVar: {
         hover: {
