@@ -50,7 +50,7 @@ export const Genres = ({ baseUrl, apiKey }) => {
                                     />}
                                     <div className="genre-txt"
                                     >
-                                        <h3>{i.name}</h3>
+                                        <h3 className="truncate">{i.name}</h3>
                                     </div>
                                 </motion.div>
                             </motion.li>
