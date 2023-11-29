@@ -53,7 +53,9 @@ export const MenuBar = () => {
     }
     const handleOptionChange = (value) => {
         setOption(value)
-        setIsMenuBarOpen(false)
+        if (isSmallDevice) {
+            setIsMenuBarOpen(false)
+        }
     }
     return (
         <StyledMenuBar>

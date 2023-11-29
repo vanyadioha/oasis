@@ -20,6 +20,8 @@ export const StyledAppLayout = styled.main`
     border-radius: 50%;
     background-color: var(--text-secondary);
     border: none;
+    display: grid;
+    place-items: center;
   }
   @media only screen and (max-width: 1320px) {
     padding: 2rem 5rem;
