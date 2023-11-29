@@ -1,7 +1,6 @@
 import {
   Carousel,
   PopularGames,
-  MenuBar,
   Deals,
   Spotlight,
   New,
@@ -13,7 +12,6 @@ export default function Home() {
   const apiKey = process.env.API_KEY;
   return (
     <>
-      <MenuBar />
       <Carousel />
       <PopularGames baseUrl={baseUrl} apiKey={apiKey} />
       <Deals />
