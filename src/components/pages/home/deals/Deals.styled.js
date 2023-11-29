@@ -14,9 +14,12 @@ export const StyledDeals = styled.section`
     height: 45rem;
     display: flex;
     justify-content: space-between;
+    > a {
+      display: block;
+      width: 23%;
+    }
   }
   .deal-container {
-    width: 23%;
     height: 45rem;
     overflow: hidden;
     position: relative;
@@ -117,10 +120,12 @@ export const StyledDeals = styled.section`
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    > a {
+      flex-basis: 30%;
+      padding: 1rem;
+    }
   }
   .explore-campaign {
-    flex-basis: 30%;
-    padding: 1rem;
     border-radius: 1rem;
     &:hover {
       cursor: pointer;
@@ -142,9 +147,11 @@ export const StyledDeals = styled.section`
       gap: 2rem;
       overflow: scroll;
       padding-bottom: 2rem;
+      > a {
+        min-width: 20rem;
+      }
     }
     .deal-container {
-      min-width: 20rem;
       height: 100%;
     }
     .deal-txt {
