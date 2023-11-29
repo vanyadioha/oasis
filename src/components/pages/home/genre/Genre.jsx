@@ -40,20 +40,22 @@ export const Genres = ({ baseUrl, apiKey }) => {
                 <ul className='game-genres'>
                     {data.results.map((i) => {
                         return (
-                            <motion.li className='game-genre' key={i.slug} variants={containerVar} initial='initial' whileHover='hover'>
-                                <motion.div className="game-img-container" variants={imgContainerVar}>
-                                    {i.image_background && <Image
-                                        src={i.image_background}
-                                        alt={i.slug}
-                                        width={1280}
-                                        height={720}
-                                    />}
-                                    <div className="genre-txt"
-                                    >
-                                        <h3 className="truncate">{i.name}</h3>
-                                    </div>
-                                </motion.div>
-                            </motion.li>
+                            <Link key={i.slug} href={`/browse`}>
+                                <motion.li className='game-genre' key={i.slug} variants={containerVar} initial='initial' whileHover='hover'>
+                                    <motion.div className="game-img-container" variants={imgContainerVar}>
+                                        {i.image_background && <Image
+                                            src={i.image_background}
+                                            alt={i.slug}
+                                            width={1280}
+                                            height={720}
+                                        />}
+                                        <div className="genre-txt"
+                                        >
+                                            <h3 className="truncate">{i.name}</h3>
+                                        </div>
+                                    </motion.div>
+                                </motion.li>
+                            </Link>
                         )
                     })}
                     <li className="browse-all">+ Browse all Games</li>

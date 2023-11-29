@@ -33,44 +33,48 @@ export const Spotlight = ({ baseUrl, apiKey }) => {
                 <ul className='sony-games'>
                     {data.results.map((i) => {
                         return (
-                            <li className='sony-game' key={i.slug}>
-                                <div className="game-img-container">
-                                    {i.background_image && <Image
-                                        src={i.background_image}
-                                        alt={i.slug}
-                                        width={1280}
-                                        height={720}
-                                    />}
-                                </div>
-                                <h3 className="game-name truncate">{i.name}</h3>
-                                <p>$59.99</p>
-                            </li>
+                            <Link key={i.slug} href={`/games/${i.slug}`}>
+                                <li className='sony-game'>
+                                    <div className="game-img-container">
+                                        {i.background_image && <Image
+                                            src={i.background_image}
+                                            alt={i.slug}
+                                            width={1280}
+                                            height={720}
+                                        />}
+                                    </div>
+                                    <h3 className="game-name truncate">{i.name}</h3>
+                                    <p>$59.99</p>
+                                </li>
+                            </Link>
                         )
                     })}
                 </ul>}
             {error && <Error />}
-            <div className="spidey2">
-                <motion.button type="button"
-                    initial={{
-                        backgroundColor: '#fff',
-                        color: '#000'
-                    }}
-                    whileHover={{
-                        backgroundColor: '#5f5f5f',
-                        color: '#fff',
-                        transition: {
-                            duration: 0.2
-                        }
-                    }}
-                >Out Now</motion.button>
-            </div>
-            {isSmallDevice && (
-                <>
-                    <p className="spidey-txt">Be Greater. Together</p>
-                    <h3 className="spidey-h1">Marvel&#39;s Spider-Man 2</h3>
-                    <p className="spidey-price">$69.99</p>
-                </>
-            )}
+            <Link href='/games/spiderman-2'>
+                <div className="spidey2">
+                    <motion.button type="button"
+                        initial={{
+                            backgroundColor: '#fff',
+                            color: '#000'
+                        }}
+                        whileHover={{
+                            backgroundColor: '#5f5f5f',
+                            color: '#fff',
+                            transition: {
+                                duration: 0.2
+                            }
+                        }}
+                    >Out Now</motion.button>
+                </div>
+                {isSmallDevice && (
+                    <>
+                        <p className="spidey-txt">Be Greater. Together</p>
+                        <h3 className="spidey-h1">Marvel&#39;s Spider-Man 2</h3>
+                        <p className="spidey-price">$69.99</p>
+                    </>
+                )}
+            </Link>
         </StyledSpotlight>
     )
 }

@@ -29,18 +29,20 @@ export const PopularGames = ({ apiKey, baseUrl }) => {
                 <ul className='popular-games'>
                     {data.results.map((i) => {
                         return (
-                            <li className='popular-game' key={i.slug}>
-                                <div className="game-img-container">
-                                    {i.background_image && <Image
-                                        src={i.background_image}
-                                        alt={i.slug}
-                                        width={1280}
-                                        height={720}
-                                    />}
-                                </div>
-                                <h3 className='game-name truncate'>{i.name}</h3>
-                                <p>$59.99</p>
-                            </li>
+                            <Link key={i.slug} href={`/games/${i.slug}`}>
+                                <li className='popular-game'>
+                                    <div className="game-img-container">
+                                        {i.background_image && <Image
+                                            src={i.background_image}
+                                            alt={i.slug}
+                                            width={1280}
+                                            height={720}
+                                        />}
+                                    </div>
+                                    <h3 className='game-name truncate'>{i.name}</h3>
+                                    <p>$59.99</p>
+                                </li>
+                            </Link>
                         )
                     })}
                 </ul>}

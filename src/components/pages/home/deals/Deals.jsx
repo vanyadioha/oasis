@@ -49,30 +49,32 @@ export const Deals = () => {
             <ul className="deals-container">
                 {gameDeals.map((i, j) => {
                     return (
-                        <motion.li key={j} className="deal-container"
-                            variants={containerVar}
-                            initial='initial'
-                            whileHover='hover'
-                        >
-                            <motion.div className="deal-img-container"
-                                variants={imgContainerVar}
+                        <Link key={j} href={`/games/${i.slug}`}>
+                            <motion.li className="deal-container"
+                                variants={containerVar}
+                                initial='initial'
+                                whileHover='hover'
                             >
-                                <Image alt={i.name} src={i.pix} />
-                            </motion.div>
-                            {isSmallDevice ?
-                                <div className="deal-txt"
+                                <motion.div className="deal-img-container"
+                                    variants={imgContainerVar}
                                 >
-                                    <h3>{i.name}</h3>
-                                    <p className="deal-prices"><s>{`$${i.old}`}</s> <span>{`$${i.new}`}</span></p>
-                                </div>
-                                :
-                                <motion.div className="deal-txt"
-                                    variants={textVar}
-                                >
-                                    <h3>{i.name}</h3>
-                                    <p className="deal-prices"><s>{`$${i.old}`}</s> <span>{`$${i.new}`}</span></p>
-                                </motion.div>}
-                        </motion.li >
+                                    <Image alt={i.name} src={i.pix} />
+                                </motion.div>
+                                {isSmallDevice ?
+                                    <div className="deal-txt"
+                                    >
+                                        <h3>{i.name}</h3>
+                                        <p className="deal-prices"><s>{`$${i.old}`}</s> <span>{`$${i.new}`}</span></p>
+                                    </div>
+                                    :
+                                    <motion.div className="deal-txt"
+                                        variants={textVar}
+                                    >
+                                        <h3>{i.name}</h3>
+                                        <p className="deal-prices"><s>{`$${i.old}`}</s> <span>{`$${i.new}`}</span></p>
+                                    </motion.div>}
+                            </motion.li >
+                        </Link>
                     )
                 })}
             </ul >
@@ -103,15 +105,17 @@ export const Deals = () => {
                     <ul className="explore-games">
                         {exploreDeals.map((i, j) => {
                             return (
-                                <motion.li
-                                    key={j}
-                                    className="explore-game"
-                                    variants={imgContainerVar}
-                                    initial='initial'
-                                    whileHover='hover'
-                                >
-                                    <Image src={i.pix} alt={i.name} />
-                                </motion.li>
+                                <Link key={j} href={`/games/${i.slug}`}>
+                                    <motion.li
+                                        key={j}
+                                        className="explore-game"
+                                        variants={imgContainerVar}
+                                        initial='initial'
+                                        whileHover='hover'
+                                    >
+                                        <Image src={i.pix} alt={i.name} />
+                                    </motion.li>
+                                </Link>
                             )
                         })}
                     </ul>
@@ -123,17 +127,19 @@ export const Deals = () => {
                 <ul className="explore-campaigns">
                     {exploreCampaigns.map((i, j) => {
                         return (
-                            <li key={j} className="explore-campaign">
-                                <div className="campaign-img">
-                                    <Image alt={i.campaignName} src={i.pix} />
-                                </div>
-                                <h3>
-                                    {`${i.campaignName} (${i.name})`}
-                                </h3>
-                                <p className="campaign-p">
-                                    {i.txt}
-                                </p>
-                            </li>
+                            <Link key={j} href={`/games/${i.slug}`}>
+                                <li className="explore-campaign">
+                                    <div className="campaign-img">
+                                        <Image alt={i.campaignName} src={i.pix} />
+                                    </div>
+                                    <h3>
+                                        {`${i.campaignName} (${i.name})`}
+                                    </h3>
+                                    <p className="campaign-p">
+                                        {i.txt}
+                                    </p>
+                                </li>
+                            </Link>
                         )
                     })}
                 </ul>
