@@ -68,24 +68,24 @@ export const exploreDeals = [
 ];
 export const exploreCampaigns = [
   {
-    name: "EA FC24",
+    name: "EA SPORTS FC 24",
     campaignName: "FUT Heroes: New icons for a new generation",
     pix: heroes,
     txt: "From Cult heroes to unsung legends, these players have all left their mark on the beautiful game and now, they are ready to join up with you on EA FC24.",
-    slug: "ea-fc-24",
+    slug: "ea-sports-fc-24",
   },
   {
     name: "Mortal Kombat 1",
     campaignName: "Kombat Pack 1: Expand your Kombat Roster",
     pix: kombat,
     txt: "Bring carnage to the world of Mortal Kombat with the new DLC warriors, Omni-man, Quan-chi and so on. Purchase the Kombat pack 1 (Available now),  to add them to your roster.",
-    slug: "mortal-kombat-1",
+    slug: "mortal-kombat-1-2023",
   },
   {
-    name: "COD: MW II",
+    name: "COD: Warzone 2.0",
     campaignName: "Old Enemies, New Alliances: Introducing the Queen",
     pix: nicki,
     txt: "Attention! Attention! Barbz do you read me? Add the new Nicki Minaj operator, emotes and various new weapons to your multiplayer and BR loadouts. Bring mayhem, dominate the competition and take all the glory!",
-    slug: "call-of-duty-modern-warfare-2",
+    slug: "call-of-duty-warzone-20",
   },
 ];
