@@ -58,12 +58,9 @@ export const Genres = ({ baseUrl, apiKey }) => {
                             </Link>
                         )
                     })}
-                    <li className="browse-all">+ Browse all Games</li>
+                    <li className="game-genre browse-all">+ Browse all Games</li>
                 </ul>}
             {error && <Error />}
         </StyledGenres>
     )
 }
-
-//  : <ImgFallback
-//     bg={i.dominant_color}>{i.name}</ImgFallback>

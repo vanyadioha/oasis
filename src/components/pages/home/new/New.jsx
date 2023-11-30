@@ -5,6 +5,7 @@ import { Error, Skeleton } from '@/components/ui'
 import { AiOutlineArrowRight as AOAR } from 'react-icons/ai'
 import { motion } from "framer-motion"
 import Link from "next/link"
+import { useMediaQuery } from "@/hooks"
 
 const variants = {
     headingVar: {
@@ -20,6 +21,8 @@ const { headingSpanVar, headingVar } = variants
 
 export const New = ({ baseUrl, apiKey }) => {
     const { data, loading, error } = useAxiosGet(`${baseUrl}/games?key=${apiKey}&page_size=10&ordering=released`)
+    const isSmallDevice = useMediaQuery('only screen and (max-width: 780px)')
+
     return (
         <StyledNew>
             <Link href='/browse'>
@@ -41,7 +44,7 @@ export const New = ({ baseUrl, apiKey }) => {
                                         /> : <ImgFallback
                                             bg={i.dominant_color}>{i.name}</ImgFallback>}
                                     </div>
-                                    <h3 className="game-name truncate">{i.name}</h3>
+                                    <h3 className={`game-name ${!isSmallDevice && 'truncate'}`}>{i.name}</h3>
                                     <p>$59.99</p>
                                 </li>
                             </Link>

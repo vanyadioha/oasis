@@ -5,6 +5,7 @@ import { AiOutlineArrowRight as AOAR } from 'react-icons/ai'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useMediaQuery } from '@/hooks'
 
 const variants = {
     headingVar: {
@@ -19,6 +20,8 @@ const variants = {
 const { headingSpanVar, headingVar } = variants
 export const PopularGames = ({ apiKey, baseUrl }) => {
     const { data, loading, error } = useAxiosGet(`${baseUrl}/games?key=${apiKey}&page=1&page_size=10`)
+    const isSmallDevice = useMediaQuery('only screen and (max-width: 780px)')
+
     return (
         <StyledPopularGames>
             <Link href='/browse'>
@@ -39,7 +42,7 @@ export const PopularGames = ({ apiKey, baseUrl }) => {
                                             height={720}
                                         />}
                                     </div>
-                                    <h3 className='game-name truncate'>{i.name}</h3>
+                                    <h3 className={`game-name ${!isSmallDevice && 'truncate'}`}>{i.name}</h3>
                                     <p>$59.99</p>
                                 </li>
                             </Link>

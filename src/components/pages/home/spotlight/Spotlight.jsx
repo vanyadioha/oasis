@@ -43,7 +43,7 @@ export const Spotlight = ({ baseUrl, apiKey }) => {
                                             height={720}
                                         />}
                                     </div>
-                                    <h3 className="game-name truncate">{i.name}</h3>
+                                    <h3 className={`game-name ${!isSmallDevice && 'truncate'}`}>{i.name}</h3>
                                     <p>$59.99</p>
                                 </li>
                             </Link>
@@ -51,7 +51,7 @@ export const Spotlight = ({ baseUrl, apiKey }) => {
                     })}
                 </ul>}
             {error && <Error />}
-            <Link href='/games/spiderman-2'>
+            <Link href='/games/marvels-spider-man-2'>
                 <div className="spidey2">
                     <motion.button type="button"
                         initial={{
