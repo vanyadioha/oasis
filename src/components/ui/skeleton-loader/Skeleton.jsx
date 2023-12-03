@@ -2,11 +2,12 @@ import { StyledSkeleton } from "./Skeleton.styled";
 import { easeInOut, motion } from "framer-motion";
 
 
-export const Skeleton = ({ w, h }) => {
+export const Skeleton = ({ w, h, br }) => {
     return (
         <StyledSkeleton
             w={w}
             h={h}
+            br={br}
         >
             <motion.div
                 initial={{
@@ -32,5 +33,6 @@ export const Skeleton = ({ w, h }) => {
 
 Skeleton.defaultProps = {
     w: '100%',
-    h: '20rem'
+    h: '20rem',
+    br: '0rem'
 }
