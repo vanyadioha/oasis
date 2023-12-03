@@ -27,7 +27,7 @@ export const PopularGames = ({ apiKey, baseUrl }) => {
             <Link href='/browse'>
                 <motion.h1 variants={headingVar} whileHover='hover'>Games that you love <motion.span variants={headingSpanVar}><AOAR size={15} /></motion.span></motion.h1>
             </Link>
-            {loading && <Skeleton />}
+            {loading && <Skeleton br={'2rem'} />}
             {data &&
                 <ul className='popular-games'>
                     {data.results.map((i) => {

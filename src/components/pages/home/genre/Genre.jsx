@@ -35,7 +35,7 @@ export const Genres = ({ baseUrl, apiKey }) => {
             <Link href='/browse'>
                 <motion.h1 className="genre-h1" variants={headingVar} whileHover='hover'>Explore Games by Genre <motion.span variants={headingSpanVar}><AOAR size={15} /></motion.span></motion.h1>
             </Link>
-            {loading && <Skeleton />}
+            {loading && <Skeleton br={'2rem'} />}
             {data &&
                 <ul className='game-genres'>
                     {data.results.map((i) => {
