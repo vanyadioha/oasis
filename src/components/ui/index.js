@@ -6,3 +6,4 @@ export * from "./appLayout/AppLayout";
 export * from "./footer/Footer";
 export * from "./skeleton-loader/Skeleton";
 export * from "./error/Error";
+export * from "./starRating/StarRating";
