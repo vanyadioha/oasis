@@ -69,6 +69,9 @@ export default createGlobalStyle`
           margin: 1rem 0;
         }
         @media only screen and (max-width: 780px) {
+          body {
+            font-size: 1.4rem;
+          }
           h1 {
             font-size: 2.5rem;
           }
