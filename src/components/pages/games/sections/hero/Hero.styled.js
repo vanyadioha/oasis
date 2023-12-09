@@ -47,6 +47,7 @@ export const StyledHero = styled.section`
   .flickity-img-container {
     border-radius: 1rem;
     overflow: hidden;
+    height: 4.5rem;
     &.active-shot {
       outline: 0.2rem solid var(--text-primary);
       outline-offset: 0.3rem;

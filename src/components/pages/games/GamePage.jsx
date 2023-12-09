@@ -1,13 +1,16 @@
 'use client'
-
 import { StyledGamePage } from "./GamePage.styled";
+import { useAxiosGet } from "@/hooks";
+import { Hero, HeroAside } from "./sections";
 
 export const GamePage = ({ slug, baseUrl, apiKey }) => {
-    const game = slug.split('-')
-    const gameName = game.join(' ').toUpperCase()
+    const gameDetails = useAxiosGet(`${baseUrl}/games/${slug}?key=${apiKey}`)
     return (
         <StyledGamePage>
-            <h1>{gameName}</h1>
+            <div className="brief-overview">
+                <Hero deets={gameDetails} slug={slug} baseUrl={baseUrl} apiKey={apiKey} />
+                <HeroAside deets={gameDetails} slug={slug} baseUrl={baseUrl} apiKey={apiKey} />
+            </div>
         </StyledGamePage>
     )
 }
