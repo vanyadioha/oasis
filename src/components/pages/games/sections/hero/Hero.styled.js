@@ -6,11 +6,30 @@ export const StyledHero = styled.section`
   .ratings {
     display: flex;
     gap: 2rem;
-    align-items: end;
+    align-items: center;
     margin-bottom: 2rem;
+  }
+  .title-info {
+    p {
+      padding: 1rem;
+      border-radius: 1rem;
+      background-color: var(--bg-secondary);
+    }
+  }
+  .ratings {
+    p {
+      padding: 1rem;
+      border-radius: 1rem;
+      background-color: var(--bg-secondary);
+    }
   }
   .carousel {
     margin-bottom: 2rem;
+  }
+  .screenshot-container {
+    height: 40.5rem;
+    border-radius: 1rem;
+    overflow: hidden;
   }
   .flickity {
     width: 100%;
@@ -24,5 +43,13 @@ export const StyledHero = styled.section`
     transform: translateX(-50%);
     display: flex;
     gap: 1rem;
+  }
+  .flickity-img-container {
+    border-radius: 1rem;
+    overflow: hidden;
+    &.active-shot {
+      outline: 0.2rem solid var(--text-primary);
+      outline-offset: 0.3rem;
+    }
   }
 `;
