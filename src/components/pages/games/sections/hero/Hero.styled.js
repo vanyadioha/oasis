@@ -72,14 +72,14 @@ export const StyledHero = styled.section`
     button {
       position: absolute;
       bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 1rem;
-      width: 60%;
-      max-width: 30rem;
+      padding: 1.5rem;
+      width: 100%;
       border: none;
-      border-radius: 1rem;
+      border-radius: 0.5rem;
       background-color: var(--text-secondary);
+    }
+    span {
+      display: inline-block;
     }
   }
   @media only screen and (max-width: 950px) {

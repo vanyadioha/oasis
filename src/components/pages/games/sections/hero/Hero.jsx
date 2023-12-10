@@ -4,6 +4,7 @@ import { useAxiosGet, useMediaQuery } from "@/hooks"
 import Image from "next/image"
 import { useState } from "react"
 import { motion } from "framer-motion"
+import { AiOutlineCaretDown as AOCD } from "react-icons/ai"
 
 export const Hero = ({ deets: { loading, data }, slug, baseUrl, apiKey }) => {
     const screenshots = useAxiosGet(`${baseUrl}/games/${slug}/screenshots?key=${apiKey}`)
@@ -91,7 +92,7 @@ export const Hero = ({ deets: { loading, data }, slug, baseUrl, apiKey }) => {
                 animate={showFullDesc ? {
                     height: 'auto',
                     overflow: 'visible',
-                    paddingBottom: '5rem'
+                    paddingBottom: '6rem'
                 } : {
                     height: '15rem',
                     overflow: 'hidden',
@@ -116,7 +117,11 @@ export const Hero = ({ deets: { loading, data }, slug, baseUrl, apiKey }) => {
                             <motion.button
                                 type="button"
                                 onClick={() => setShowFullDesc((i) => !i)}
-                            >Show More</motion.button>
+                            >Show {showFullDesc ? 'Less' : 'More'} <motion.span animate={showFullDesc ? {
+                                rotate: 180
+                            } : {
+                                rotate: 0
+                            }}><AOCD /></motion.span></motion.button>
                         </motion.div>
                     </>
                 }
