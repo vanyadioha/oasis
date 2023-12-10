@@ -1,26 +1,31 @@
 import { Skeleton, StarRating } from "@/components/ui"
 import { StyledHero } from "./Hero.styled"
-import { useAxiosGet } from "@/hooks"
+import { useAxiosGet, useMediaQuery } from "@/hooks"
 import Image from "next/image"
 import { useState } from "react"
+import { motion } from "framer-motion"
 
 export const Hero = ({ deets: { loading, data }, slug, baseUrl, apiKey }) => {
     const screenshots = useAxiosGet(`${baseUrl}/games/${slug}/screenshots?key=${apiKey}`)
     const [currentShot, setCurrentShot] = useState(0)
+    const isMobile = useMediaQuery('only screen and (max-width: 450px)')
+    const isSmallScreen = useMediaQuery('only screen and (max-width: 780px)')
+    const isMediumScreen = useMediaQuery('only screen and (max-width: 1320px)')
+    const imagesToDisplay = isMobile ? 3 : isSmallScreen ? 4 : isMediumScreen ? 5 : 6
+    const [showFullDesc, setShowFullDesc] = useState(false)
     return (
         <StyledHero>
-            {/* Name, Developer, Publisher */}
             <div className="title-info">
                 {loading &&
                     <>
-                        <Skeleton w={'50rem'} h={'3rem'} />
-                        <Skeleton w={'5rem'} h={'2rem'} br={'0.5rem'} />
+                        <Skeleton w={'50%'} h={'3rem'} />
+                        {!isMobile && <Skeleton w={'5rem'} h={'2rem'} br={'0.5rem'} />}
                     </>
                 }
                 {data &&
                     <>
                         <h1>{data.name}</h1>
-                        <p>{data.parents_count == 0 ? 'Base Game' : 'Add-ons +/- Base Game'}</p>
+                        {!isMobile && <p>{data.parents_count == 0 ? 'Base Game' : 'Add-ons +/- Base Game'}</p>}
                     </>
                 }
             </div>
@@ -42,7 +47,7 @@ export const Hero = ({ deets: { loading, data }, slug, baseUrl, apiKey }) => {
             <div className="carousel">
                 {screenshots.loading &&
                     <>
-                        <Skeleton h={'45rem'} />
+                        <Skeleton h={isMobile ? '20rem' : isSmallScreen ? '30rem' : '45rem'} />
                     </>
                 }
                 {screenshots.data &&
@@ -60,14 +65,14 @@ export const Hero = ({ deets: { loading, data }, slug, baseUrl, apiKey }) => {
                 <div className="flickity-container">
                     {screenshots.loading &&
                         <>
-                            <Skeleton w={'10rem'} h={'8rem'} />
-                            <Skeleton w={'10rem'} h={'8rem'} />
-                            <Skeleton w={'10rem'} h={'8rem'} />
+                            <Skeleton w={'10rem'} h={'4.5rem'} />
+                            <Skeleton w={'10rem'} h={'4.5rem'} />
+                            <Skeleton w={'10rem'} h={'4.5rem'} />
                         </>
                     }
                     {screenshots.data &&
                         <>
-                            {screenshots.data.results.map((i, j) => (
+                            {screenshots.data.results.map((i, j) => (j < imagesToDisplay &&
                                 <div key={j} onClick={() => setCurrentShot(j)} className={`flickity-img-container ${currentShot === j && 'active-shot'}`}>
                                     <Image
                                         src={i.image}
@@ -81,16 +86,41 @@ export const Hero = ({ deets: { loading, data }, slug, baseUrl, apiKey }) => {
                     }
                 </div>
             </div>
-            <div className="game-desc">
+            <motion.div
+                className="game-desc"
+                animate={showFullDesc ? {
+                    height: 'auto',
+                    overflow: 'visible',
+                    paddingBottom: '5rem'
+                } : {
+                    height: '15rem',
+                    overflow: 'hidden',
+                    paddingBottom: 0,
+                }}
+            >
                 {loading &&
                     <>
                         <Skeleton h={'15rem'} />
                     </>
                 }
                 {data &&
-                    <p>{data.description_raw}</p>
+                    <>
+                        <p>{data.description_raw}</p>
+                        <motion.div className="embargo"
+                            animate={showFullDesc ? {
+                                background: 'transparent'
+                            } : {
+                                background: 'linear-gradient(to top, var(--bg-primary), #191d20cc, #00000000)'
+                            }}
+                        >
+                            <motion.button
+                                type="button"
+                                onClick={() => setShowFullDesc((i) => !i)}
+                            >Show More</motion.button>
+                        </motion.div>
+                    </>
                 }
-            </div>
+            </motion.div>
         </StyledHero>
     )
 }

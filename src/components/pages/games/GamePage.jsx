@@ -9,7 +9,7 @@ export const GamePage = ({ slug, baseUrl, apiKey }) => {
         <StyledGamePage>
             <div className="brief-overview">
                 <Hero deets={gameDetails} slug={slug} baseUrl={baseUrl} apiKey={apiKey} />
-                <HeroAside deets={gameDetails} slug={slug} baseUrl={baseUrl} apiKey={apiKey} />
+                <HeroAside deets={gameDetails} />
             </div>
         </StyledGamePage>
     )

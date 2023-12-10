@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const StyledHeroAside = styled.aside`
-  flex-basis: 25%;
+  flex-basis: 30%;
   padding: 10rem 1rem 0;
   .game-details {
     margin-bottom: 2rem;
@@ -43,5 +43,9 @@ export const StyledHeroAside = styled.aside`
     h1 {
       font-size: 5rem;
     }
+  }
+  @media only screen and (max-width: 950px) {
+    flex-basis: auto;
+    padding: 0 1rem;
   }
 `;
