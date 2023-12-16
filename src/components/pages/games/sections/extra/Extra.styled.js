@@ -1,7 +1,6 @@
 import { styled } from "styled-components";
 
 export const StyledExtras = styled.div`
-  width: 70%;
   margin-top: 5rem;
   .genres-platforms {
     display: flex;
@@ -25,7 +24,6 @@ export const StyledExtras = styled.div`
     }
   }
   @media only screen and (max-width: 950px) {
-    width: 100%;
   }
 
   @media only screen and (max-width: 450px) {

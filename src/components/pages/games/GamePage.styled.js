@@ -10,9 +10,15 @@ export const StyledGamePage = styled.main`
     width: 100%;
     gap: 2rem;
   }
+  .extra-content {
+    width: 70%;
+  }
   @media only screen and (max-width: 950px) {
     .brief-overview {
       flex-direction: column;
+    }
+    .extra-content {
+      width: 100%;
     }
   }
   @media only screen and (max-width: 780px) {
