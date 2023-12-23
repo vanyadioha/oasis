@@ -36,7 +36,7 @@ export const DlcAndParent = ({ deets: { data }, apiKey, baseUrl, slug }) => {
             {/* PARENT GAMES */}
             {parents.data && parents.data.count > 0 &&
                 <StyledDlcAndParent>
-                    <h2>{data && `Parent Game for ${data.name}`}</h2>
+                    <h2>{data && `Base Game for ${data.name}`}</h2>
                     <div className="dlc-games">
                         {parents.data.results.map((i, j) => (
                             <Link key={i.slug} href={`/games/${i.slug}`}>

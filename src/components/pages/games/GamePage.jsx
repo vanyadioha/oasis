@@ -1,7 +1,7 @@
 'use client'
 import { StyledGamePage } from "./GamePage.styled";
 import { useAxiosGet } from "@/hooks";
-import { DlcAndParent, Extras, Hero, HeroAside } from "./sections";
+import { DlcAndParent, Extras, GameSeries, Hero, HeroAside } from "./sections";
 
 export const GamePage = ({ slug, baseUrl, apiKey }) => {
     const gameDetails = useAxiosGet(`${baseUrl}/games/${slug}?key=${apiKey}`)
@@ -14,9 +14,8 @@ export const GamePage = ({ slug, baseUrl, apiKey }) => {
             <div className="extra-content">
                 <Extras deets={gameDetails} />
                 <DlcAndParent deets={gameDetails} slug={slug} baseUrl={baseUrl} apiKey={apiKey} />
+                <GameSeries deets={gameDetails} slug={slug} baseUrl={baseUrl} apiKey={apiKey} />
             </div>
-            {/* {GAMENAEM} DLCS & BONUS CONTENT */}
-            {/* {GAMENAEM} PARENT GAME */}
             {/* GAMES PART OF THE SAME SERIES AS {GAMENAEM} */}
             {/* {GAMENAEM} RATINGS: METACRITIC, RAWG, ESRB */}
             {/* {GAMENAEM} SYSTEM REQUIREMENTS */}
