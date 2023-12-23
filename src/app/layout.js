@@ -1,6 +1,7 @@
 import { Menu, Navbar, AppLayout, Footer } from "@/components/ui";
 import Global from "@/components/Global";
 import { NavMenuProvider } from "@/state/navMenuState/navMenuContext";
+import StyledComponentsRegistry from "@/lib/styledComponentsRegistry";
 
 export const metadata = {
   title: "Oasis Games",
@@ -11,13 +12,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Global />
-        <NavMenuProvider>
-          <Navbar />
-          <Menu />
-        </NavMenuProvider>
-        <AppLayout>{children}</AppLayout>
-        <Footer />
+        <StyledComponentsRegistry>
+          <Global />
+          <NavMenuProvider>
+            <Navbar />
+            <Menu />
+          </NavMenuProvider>
+          <AppLayout>{children}</AppLayout>
+          <Footer />
+        </StyledComponentsRegistry>
       </body>
     </html>
   );
