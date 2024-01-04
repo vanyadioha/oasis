@@ -17,7 +17,6 @@ export const GamePage = ({ slug, baseUrl, apiKey }) => {
                 <GameSeries deets={gameDetails} slug={slug} baseUrl={baseUrl} apiKey={apiKey} />
                 <Ratings deets={gameDetails} />
             </div>
-            {/* {GAMENAEM} RATINGS: METACRITIC, RAWG, ESRB */}
             {/* {GAMENAEM} SYSTEM REQUIREMENTS */}
             {/* {GAMENAME} IS DEVLOPED BY {DEVELOPER AND PUBLISHED BY {PUBLISHER}. COPYRIGHT C-SIGN {DEVELOPER}{YEAR OF DEV}. "{GAMENAME}" IS A TRADEMARK OF {DEVELOPER}, REGISTERED IN THE IUNITD STATES AND OTHER COUNTRIES. ALL RIGHTS RESERVED  */}
             {/* PRIVACY POLICY TEXT */}
